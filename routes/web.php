@@ -8,8 +8,7 @@ Route::get('/', [InscriptionController::class, 'home'])->name('home');
 
 //Inscription utilisateur
 Route::get('register', [InscriptionController::class, 'index'])->name('inscription.index');
-Route::post('validate-register', [InscriptionController::class, 'register'])
-    ->name('inscription.register');
+Route::post('validate-register', [InscriptionController::class, 'register'])->name('inscription.register');
 
 //Authentification
 Route::get('connexion', [AuthController::class, 'create'])->name('auth.create');
