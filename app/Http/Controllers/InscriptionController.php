@@ -14,7 +14,7 @@ class InscriptionController extends Controller
         return view('pages.inscription.index');
     }
 
-    //Valider le formulaire
+    //Valider le formulaire Participant
     public function register(Request $request)
     {
         $request->validate([
@@ -55,6 +55,8 @@ class InscriptionController extends Controller
 
         return back()->with('error', "Une erreur s'est produite");
     }
+
+    //Valider le formulaire Gerant
 
     public function home() {
         return view('welcome');
